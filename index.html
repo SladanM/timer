@@ -1,37 +1,36 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-  <!--<![endif]-->
+<html>
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css"
   </head>
   <body>
-    <h1>TIMER</h1>
-    <svg height="500" width="500">
-      <circle
-        r="180"
-        cx="250"
-        cy="250"
-        fill="transparent"
-        stroke="dodgerblue"
-        stroke-width="10"
-        stroke-dasharray="1130"
-        stroke-dashoffset="15"
-      />
-    </svg>
-    <input id="duration" value="30" />
-    <button id="startClock">START</button>
-    <button id="pauseClock">PAUSE</button>
+    <div class="timer">
+      <div class="controls">
+        <input id="duration" value="3" />
+        <div>
+          <button id="startClock"><i class="fas fa-play"></i></button>
+          <button id="pauseClock"><i class="fas fa-pause"></i></button>
+        </div>
+      </div>
+      <svg class="dial">
+        <circle
+          fill="transparent"
+          stroke="dodgerblue"
+          stroke-width="15"
+          r="190"
+          cx="0"
+          cy="200"
+          transform="rotate(-90 100 100)"
+        />
+      </svg>
+    </div>
 
-    <script src="timer.js" async defer></script>
-    <script src="index.js" async defer></script>
+    <script src="timer.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
